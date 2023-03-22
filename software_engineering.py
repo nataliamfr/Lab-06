@@ -8,6 +8,17 @@ def encode(password):
     return encoded_password
 
 
+def decode(encoder):   # added by alejandra
+
+    decoded = ''
+    for i in encoder:
+        value = int(i)
+        new_value = (value - 3) % 10
+        string_value = str(new_value)
+        decoded += string_value
+
+    return decoded
+
 if __name__ == '__main__':
     while True:
         print("Menu\n-------------\n1. Encode\n2. Decode\n3. Quit\n")
